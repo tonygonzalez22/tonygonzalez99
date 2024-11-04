@@ -1,0 +1,160 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    border:0 ;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+ body{
+    text-align: center;
+    font-family: sans-serif;
+ }
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #171717;
+    width: 100%;
+    z-index: 100;
+
+}
+
+.navbar{
+    display: flex;
+    margin-right: 10px;
+}
+
+
+   
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a {
+    display: block ;
+    padding: 23px 20px ;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.navbar a:hover{
+    background:#5b5a5a;
+}
+
+.header{
+    height: 60vh !important ;
+    background: url(/assent/acr\ domotica.png) no-repeat center;
+    background-size:cover;
+}
+.title{
+    margin-bottom:40px;
+    font-size:60px ;
+    font-weight: 600px;
+    text-transform: uppercase;
+    
+}
+p{
+    margin-bottom: 40px;
+    font-size: 18px;
+
+}
+.boton{
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #9c27b0 ;
+    color:aliceblue;
+    text-decoration: none;
+    background: #c63cdf;
+
+}
+.boton:hover{
+    background: none;
+}
+.boton-home{
+    display: flex;
+
+}
+.boton-home a {
+    margin: 0px 10px ;
+
+}
+
+.contenido{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.sau {
+
+    padding: 30px; ;
+    background: #1f1d1d;
+    color: aliceblue;
+
+}
+
+.box-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 10px 10%;
+    
+    
+}
+
+.product-box {
+    width: 250px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 13px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.product-box:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-name {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1.2em;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+
+
+
+
