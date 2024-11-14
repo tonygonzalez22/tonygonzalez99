@@ -1,0 +1,30 @@
+@mixin faq-container($max-width: 800px, $margin-bottom: 20px, $border-color: #ddd, $h2-color: #eeff00, $p-color: #ffffff, $p-font-size: 1rem, $h2-font-size: 1.2rem, $margin-top: 5px) {
+  max-width: $max-width;
+  margin: 0 auto;
+
+  .faq {
+    margin-bottom: $margin-bottom;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 10px;
+
+    h2 {
+      font-size: $h2-font-size;
+      color: $h2-color;
+      cursor: pointer;
+    }
+
+    p {
+      font-size: $p-font-size;
+      color: $p-color;
+      display: none;
+      margin-top: $margin-top;
+    }
+
+    &.open p {
+      display: block;
+    }
+  }
+}
+.faq-container {
+  @include faq-container($max-width: 900px, $h2-color: #ffcc00);
+}

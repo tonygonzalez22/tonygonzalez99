@@ -1,0 +1,21 @@
+
+.contenido {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sau {
+    padding: 30px;
+    background: #1f1d1d;
+    color: aliceblue;
+    text-align: center;
+    background-color: #010101;
+  
+    .title {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+  }

@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh !important;
+    background: url(/assent/acrdomotica.png) no-repeat center;
+    background-size: cover;
+    background-color: #222;
+    color: rgb(0, 0, 0);
+    padding: 40px 20px;
+    text-align: center;
+  
+    .title {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+  }
