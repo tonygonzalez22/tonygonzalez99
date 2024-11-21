@@ -1,0 +1,209 @@
+// Variables
+$main-color: #fefffb;
+$secondary-color: #fd00ad;
+$background-dark: #151c24;
+$background-light: #40223a;
+$text-color: #d9d9d9;
+$box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+$max-width: 1200px;
+$border-radius: 25px;
+
+// Mixins
+@mixin flex-center($direction: row, $align: center, $justify: center) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+@mixin gradient-bg($colors...) {
+  background: linear-gradient(90deg, $colors...);
+}
+
+@mixin text-style($size, $weight: 400, $color: $main-color) {
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin shadow {
+  box-shadow: $box-shadow;
+}
+
+// Estilos
+.container {
+  @include container;
+}
+
+.header {
+  @include flex-center(row, center);
+  position: relative;
+  min-height: 70vh;
+
+  .bg {
+    position: absolute;
+    width: 1100px;
+    z-index: -1;
+    left: -100px;
+    top: -300px;
+  }
+
+  .header-content {
+    @include flex-center(row);
+
+    .header-txt {
+      width: 50%;
+
+      h1 {
+        @include text-style(55px, 500, $main-color);
+        line-height: 70px;
+        margin-bottom: 25px;
+      }
+
+      span {
+        font-weight: 800;
+      }
+
+      p {
+        @include text-style(16px, 400, $text-color);
+        margin-bottom: 35px;
+      }
+    }
+
+    .header-img {
+      width: 50%;
+
+      .lap {
+        width: 650px;
+      }
+    }
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  @include flex-center(row, center, space-between);
+  z-index: 1000;
+
+  .logo {
+    @include text-style(26px, 800, aliceblue);
+  }
+
+  .navbar {
+    ul {
+      li {
+        position: relative;
+        float: left;
+
+        a {
+          @include text-style(18px, 600, #dfdde0);
+          padding: 20px;
+          display: block;
+
+          &:hover {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .menu-icono {
+    width: 25px;
+  }
+
+  label {
+    cursor: pointer;
+    display: none;
+  }
+}
+
+.btn-1 {
+  display: inline-block;
+  padding: 13px 35px;
+  color: #dfdde0;
+  border-radius: $border-radius;
+  @include gradient-bg(rgba(131, 45, 153, 1) 33%, rgba(193, 58, 143, 1) 69%, rgba(196, 37, 116, 1) 100%);
+  @include shadow;
+}
+
+.services {
+  padding: 50px 0;
+  text-align: center;
+
+  .info {
+    display: inline-block;
+    @include text-style(14px, 800, $secondary-color);
+    padding: 2px 45px;
+    border-radius: $border-radius;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: $background-light;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    @include text-style(40px, 600, $main-color);
+    margin-bottom: 45px;
+  }
+
+  .services-content {
+    @include flex-center(row, center);
+
+    .services-txt {
+      width: 50%;
+    }
+
+    .services-card {
+      @include flex-center(row);
+      background-color: $background-dark;
+      padding: 15px 20px;
+      border-radius: $border-radius;
+      width: 500px;
+      margin-bottom: 35px;
+      @include shadow;
+
+      img {
+        width: 25px;
+        margin-right: 25px;
+      }
+      .card-txt {
+        text-align: left;
+
+        h3 {
+          @include text-style(16px, 600, $main-color);
+          margin-bottom: 10px;
+        }
+
+        p {
+          @include text-style(16px, 400, #8d8d8d);
+          margin-bottom: 10px;
+        }
+
+        a {
+          @include text-style(16px, 600, $main-color);
+        }
+      }
+    }
+
+    .services-img {
+      width: 50%;
+
+      img {
+        width: 550px;
+      }
+    }
+  }
+}
